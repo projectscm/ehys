@@ -17,7 +17,7 @@ task jdependReport(dependsOn: jdependMain, group: 'verification', description: '
     ant.xslt(
             in: "$reporting.baseDir/jdepend/main.xml",
             style: "$rootDir/conf/jdepend/jdepend.xsl",
-            out:"$reporting.baseDir/jdepend/main.html")
+            out: "$reporting.baseDir/jdepend/main.html")
 }
 
 check {

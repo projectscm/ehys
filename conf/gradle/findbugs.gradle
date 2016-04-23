@@ -5,7 +5,7 @@ findbugs {
     sourceSets = [sourceSets.main]
     reportsDir = file("$project.buildDir/reports/findbugs")
     effort = "max"
-    reportLevel ="high"
+    reportLevel = "high"
     excludeFilter = file("$rootProject.projectDir/conf/findbugs/excludeFilter.xml")
 }
 findbugsMain {

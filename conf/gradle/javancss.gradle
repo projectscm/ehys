@@ -13,16 +13,16 @@ task javancss(dependsOn: 'classes') << {
     mkdir "build/reports/javancss/"
     ant {
         logging.level = LogLevel.INFO
-        taskdef(name:'javancss', classname:'javancss.JavancssAntTask', classpath: configurations.javancss.asPath)
+        taskdef(name: 'javancss', classname: 'javancss.JavancssAntTask', classpath: configurations.javancss.asPath)
         javancss(
-                srcdir:'src/main/java',
-                abortOnFail:'false',
-                generateReport:'true',
-                packageMetrics:'true',
-                classMetrics:'true',
-                functionMetrics:'true',
+                srcdir: 'src/main/java',
+                abortOnFail: 'false',
+                generateReport: 'true',
+                packageMetrics: 'true',
+                classMetrics: 'true',
+                functionMetrics: 'true',
                 outputFile: "build/reports/javancss/javancss.txt",
-                ccnPerFuncMax:10
+                ccnPerFuncMax: 10
         )
     }
 }

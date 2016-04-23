@@ -28,7 +28,6 @@ apply from: "$rootDir/conf/gradle/liquibase.gradle"
 apply from: "$rootDir/conf/gradle/checkstyle.gradle"
 apply from: "$rootDir/conf/gradle/pmd.gradle"
 apply from: "$rootDir/conf/gradle/javadoc.gradle"
-apply from: "$rootDir/conf/gradle/clover.gradle"
 apply from: "$rootDir/conf/gradle/jdepend.gradle"
 apply from: "$rootDir/conf/gradle/findbugs.gradle"
 apply from: "$rootDir/conf/gradle/javancss.gradle"
@@ -36,7 +35,7 @@ apply from: "$rootDir/conf/gradle/tomcat.gradle"
 
 
 defaultTasks 'clean', 'check', 'build', 'javadoc'
-description = 'TPE PROJESİ'
+description = 'ProLMS'
 
 if (cleanBeforeCompile.toBoolean()) {
     compileJava { dependsOn += ['clean'] }

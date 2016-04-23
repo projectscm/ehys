@@ -8,8 +8,8 @@
     </Match>
     <Match>
         <!-- Offending methods are inherited from javac -->
-        <Class name="org.visage.tools.tree.VisageTreeMaker" />
-        <Bug  pattern="NM_METHOD_NAMING_CONVENTION" />
+        <Class name="org.visage.tools.tree.VisageTreeMaker"/>
+        <Bug pattern="NM_METHOD_NAMING_CONVENTION"/>
     </Match>
     <Match>
         <!-- Offending classes are generated -->
