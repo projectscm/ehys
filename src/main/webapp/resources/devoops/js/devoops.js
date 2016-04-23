@@ -2300,7 +2300,7 @@ $(document).ready(function () {
 	});
 	var ajax_url = location.hash.replace(/^#/, '');
 	if (ajax_url.length < 1) {
-		ajax_url = 'ajax/dashboard.html';
+		ajax_url = 'resources/devoops/ajax/dashboard.html';
 	}
 	LoadAjaxContent(ajax_url);
 	$('.main-menu').on('click', 'a', function (e) {
@@ -2414,7 +2414,7 @@ $(document).ready(function () {
 		if (e.keyCode == 13){
 			e.preventDefault();
 			$('#content').removeClass('full-content');
-			ajax_url = 'ajax/page_search.html';
+			ajax_url = 'resources/devoops/ajax/page_search.html';
 			window.location.hash = ajax_url;
 			LoadAjaxContent(ajax_url);
 		}

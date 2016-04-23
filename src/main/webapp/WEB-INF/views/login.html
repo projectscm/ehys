@@ -1,47 +1,46 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content=""/>
-    <meta name="author" content="Simplicity Itself"/>
-
-    <title>ProLMS</title>
-
+<html lang="tr">
+<head data-th-replace="fragment/head :: head">
 </head>
 <body>
-<div class="row">
-    <div class="well col-md-6 col-md-offset-2">
+<div class="container-fluid">
+    <div id="page-login" class="row">
+        <div class="col-xs-12 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+            <div class="text-right">
+                <a href="page_register.html" class="txt-default"
+                   data-th-text="#{button.register.text}"></a>
+            </div>
+            <div class="box">
+                <div class="box-content">
+                    <form id="loginForm" method="post" action="#" data-th-action="@{/login}">
+                        <div class="text-center">
+                            <h3 class="page-header" data-th-text="#{header.login.text}"></h3>
+                        </div>
 
-        <div id="message" class="alert alert-info" data-th-if="${message}">
-            <strong data-th-text="${message}"></strong>
+                        <div class="form-group">
+                            <label class="control-label"
+                                   data-th-text="#{label.username.text}"></label>
+                            <input type="text" class="form-control" name="username" id="username"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label"
+                                   data-th-text="#{label.password.text}"></label>
+                            <input type="password" class="form-control" name="password"
+                                   id="password"/>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary"
+                                    data-th-text="#{button.signin.text}"></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <form id="loginForm" method="post" action="#" data-th-action="@{/login}"
-              class="form-horizontal">
-            <div class="form-group">
-                <label for="username" class="col-sm-2 control-label">Kullanıcı Adı</label>
-
-                <div class="col-sm-4">
-                    <input title="Boş geçilemez." type="text" id="username" name="username"
-                           class="form-control" placeholder="Kullanıcı Adı" required="required"/>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="password" class="col-sm-2 control-label">Şifre</label>
-
-                <div class="col-sm-4">
-                    <input title="Şifrenizi Giriniz." type="password" id="password" name="password"
-                           class="form-control" placeholder="Şifre" required="required"/>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-4">
-                    <input type="submit" class="btn btn-primary" value="Giriş Yap"/>
-                </div>
-            </div>
-        </form>
     </div>
 </div>
+<footer data-th-replace="fragment/footer :: footer">
+</footer>
 </body>
 </html>
