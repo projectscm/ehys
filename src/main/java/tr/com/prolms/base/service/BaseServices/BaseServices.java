@@ -35,7 +35,7 @@ public class BaseServices<T> implements IBaseServices {
   @Override
   public org.apache.poi.ss.formula.functions.T updateEntity(org.apache.poi.ss.formula.functions.T Entity) {
     try {
-      return baseRepo.save(Entity);
+      return (org.apache.poi.ss.formula.functions.T) baseRepo.save(Entity);
     }
     catch (Exception ex){
       ex.printStackTrace();
@@ -80,7 +80,7 @@ public class BaseServices<T> implements IBaseServices {
   @Override
   public org.apache.poi.ss.formula.functions.T getEntity(long id) {
     try {
-      return baseRepo.findOne(id);
+      return (org.apache.poi.ss.formula.functions.T) baseRepo.findOne(id);
     }
     catch (Exception e){
       e.printStackTrace();

@@ -9,5 +9,5 @@ import org.springframework.transaction.annotation.Transactional;
  * Created by ramazancesur on 30/04/2016.
  */
 @Transactional
-public interface BaseRepo extends JpaRepository<T,Long> {
+public interface BaseRepo<T> extends JpaRepository<T,Long> {
 }
