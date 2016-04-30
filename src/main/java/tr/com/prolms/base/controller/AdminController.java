@@ -24,7 +24,7 @@ public class AdminController {
    * User service.
    */
   @Autowired
-  UserService userService;
+  private UserService userService;
 
   /**
    * Access Denied for not admin users.

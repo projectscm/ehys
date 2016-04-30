@@ -17,6 +17,11 @@ import java.security.Principal;
 @Controller
 public class LoginController {
 
+  /**
+   * Pages.
+   */
+  private static final String PAGE_WELCOME = "/welcome";
+
   @Autowired
   UserService userService;
 
@@ -25,7 +30,10 @@ public class LoginController {
    * @return String index
    */
   @RequestMapping(value = "/", method = RequestMethod.GET)
-  public String index() {
+  public String index(Principal user) {
+    if (user != null) {
+      return PAGE_WELCOME;
+    }
     return "/index";
   }
 
@@ -36,7 +44,7 @@ public class LoginController {
   @RequestMapping(value = "/login", method = RequestMethod.GET)
   public String login(Principal user) {
     if (user != null) {
-      return "/welcome";
+      return PAGE_WELCOME;
     }
     return "/login";
   }
@@ -48,12 +56,12 @@ public class LoginController {
    * @return String welcome
    * @throws Exception exp
    */
-  @RequestMapping(value = "/welcome", method = RequestMethod.GET)
+  @RequestMapping(value = PAGE_WELCOME, method = RequestMethod.GET)
   public String welcome(Principal user, Model model) throws Exception {
     User user1 = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     String name = user1.getUsername();
     model.addAttribute("message", name);
-    return "/welcome";
+    return PAGE_WELCOME;
   }
 
   /**
