@@ -1,7 +1,7 @@
 package tr.com.prolms.base.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.transaction.annotation.Transactional;
+
 import tr.com.prolms.base.entity.Role;
 
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * This repository provide crud operation for Role entity.
  */
-@Transactional
+
 public interface RoleRepository extends JpaRepository<Role, Long> {
 
   String myCache = "myCache";

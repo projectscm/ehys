@@ -4,7 +4,7 @@ import org.apache.poi.ddf.EscherColorRef;
 import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
 import tr.com.prolms.base.repository.BaseRepo;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import java.util.List;
  * Created by ramazancesur on 30/04/2016.
  */
 @Service
-@Transactional
+
 public class BaseServices<T> implements IBaseServices {
 
   @Autowired

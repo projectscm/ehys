@@ -6,5 +6,5 @@ import tr.com.prolms.base.entity.Cevaplar;
 /**
  * Created by ramazancesur on 30/04/2016.
  */
-public interface CevapRepo extends JpaRepository<Cevaplar,Long> {
+public interface CevapRepo extends BaseRepo<Cevaplar>{
 }
